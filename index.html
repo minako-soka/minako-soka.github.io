@@ -1,30 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="ja">
 
 <head>
     <meta charset="UTF-8" />
-    <title>Chart.jsでグラフを描画する</title>
+    <link rel="stylesheet" href="css/hw.css" />
+    <title>卵ハンバーガーのつくり方</title>
 </head>
 
 <body>
 
     <header>
-        <h1>Chart.jsでグラフを描画する</h1>
+        <h1>卵ハンバーガーのつくり方</h1>
     </header>
-
+    
     <div>
-        <h2>棒グラフ</h2>
-        <canvas id="bar" widch="400" height="400"></canvas>
+        <p>簡単でおいしい卵ハンバーガー！</p>
+        <p>お弁当にいれたら、お子さんが喜んでくれること間違いなし！</p>
+        <p>材料も少ないので、ぜひ作ってみてください。</p>
+        <audio src="audio/y2mate.com%20-%20Cat%20life.mp3" style="height: 25px;" loop autoplay controls></audio>
+        <p id=attention>※見出しを押すと内容を省略できます。</p>
     </div>
     
-    
-        
-    <!-- 外部のjavascriptファイルを読み込む -->
-    <!-- 読み込む順番が重要です。 -->
+    <hr />
+
+    <div>
+        <h2 id=div1>▼材料（1人分）</h2>
+        <table border="1" id=table>
+            <tr>
+                <th></th>
+                <th>材料名</th>
+                <th>分量</th>
+                <th></th>
+                <th>材料名</th>
+                <th>分量</th>
+            </tr>
+            <tr>
+                <th>1</th>
+                <td>卵</td>
+                <td>2個</td>
+                <th>5</th>
+                <td>ハム</td>
+                <td>4分の1、2切れ</td>
+            </tr>
+            <tr>
+                <th>2</th>
+                <td>チーズ</td>
+                <td>4分の1、2切れ</td>
+                <th>6</th>
+                <td>マヨネーズ</td>
+                <td>少量</td>
+            </tr>
+            <tr>
+                <th>3</th>
+                <td>トマト</td>
+                <td>2切れ</td>
+                <th>7</th>
+                <td>つまようじ</td>
+                <td>2本</td>
+            </tr>
+            <tr>
+                <th>4</th>
+                <td>きゅうり</td>
+                <td>2切れ</td>
+                <th>8</th>
+                <td>愛</td>
+                <td>両手からあふれる程度</td>
+            </tr>
+        </table>
+    </div>
+
+    <hr />
+
+    <div>
+        <h2 id=div2>▼作り方</h2>
+        <ol id=ol>
+            <li>ゆで卵をつくり、半分に切る。</li>
+            <li>卵の間にチーズ、トマト、レタス、マヨネーズ、ハムの順番に具材を挟む。</li>
+            <li>卵をのせ、つまようじを中央にさす。</li>
+            <li>手でハートをつくり、「萌え萌えキュン♥」と言いながら、愛を発射させる。</li>
+            <li>完成！！！</li>
+        </ol>
+    </div>
+
+    <hr />
+
+    <div>
+        <h2 id=div3>▼写真</h2>
+        <img src="img/IMG_1614.JPG" width="400" alt="img" />
+        <img src="img/IMG_1615.JPG" width="400" alt="img" />
+        <img src="img/IMG_1616.JPG" width="400" alt="img" />
+        <img src="img/IMG_1620.JPG" width="400" alt="img" />
+        <img src="img/IMG_1618.JPG" width="400" alt="img" />
+
+    </div>
+
+    <hr />
+
+    <div>
+        <h2 id=div4>▼感想</h2>
+        <button type="button" onclick="question(0)"　>よくない</button>
+        <button type="button" onclick="question(1)">どちらかというとよくない</button>
+        <button type="button" onclick="question(2)">どちらでもない</button>
+        <button type="button" onclick="question(3)">どちらかというとよい</button>
+        <button type="button" onclick="question(4)">よい</button>
+        <p id=result></p>
+    </div>
+
+    <hr />
+
+    <div>
+        <h2 id=div5>▼お問い合わせ</h2>
+        <form action="#" method="get" id=form>
+            <p class=div-p>
+                <label for="last-name">姓：</label>
+                <input type="text" name="lastname" id="last-name" placeholder="姓" value="姓" required />
+
+                <label>
+                    名：
+                    <input type="text" name="firstname" id="first-name" placeholder="名" value="名" required />
+                </label>
+            </p>
+
+            <p>
+                <label><input type="radio" name="seibetsu" value="female" />女性</label>
+                <label><input type="radio" name="seibetsu" value="male" />男性</label>
+                <label><input type="radio" name="seibetsu" value="other" checked />その他</label>
+            </p>
+
+            <p>
+                <label for="birthday">誕生日：</label>
+                <input type="date" id="birthday" />
+            </p>
+
+            <p class=div-p>
+                <label for="requests">要望：</label>
+                <textarea id="requests" name="requests" rows="8" cols="60" >ここに入力</textarea>
+            </p>
+
+            <p>
+                <input type="checkbox" name="agreement" id="agreement" value="agreement" checked />
+                <label for="agreement">プライバシーポリシーに同意する</label>
+            </p>
+
+            <p>
+                <input type="submit" value="送信する" />
+                <input type="reset" value="リセット" />
+            </p>
+
+        </form>
+
+    </div>
+
+    <hr />
+
+    <footer>
+        Copyright &copy; Minako YAMANE. All Rights Reserved.
+    </footer>
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.js"></script>
-    <script src="js/chart-test.js"></script>
-    
+    <script src="js/hw.js"></script>
+
 </body>
 
 </html>
