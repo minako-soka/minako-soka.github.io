@@ -1,0 +1,11 @@
+git clone https://github.com/rikilele/RakutenPay2MoneyForwardME.git
+npm install
+
+touch .env
+
+MAILSLURP_API_KEY="ef826793506e3610e818e888da26caaa27b95d5cc619e32bf43ad910c3c51c91"
+MAILSLURP_INBOX_ID="14e1c5cf-02e9-4f25-9c6c-594e3e6cf48a"
+MONEY_FORWARD_EMAIL="m.cherry0375@gmail.com"
+MONEY_FORWARD_PW="Aporo1gou"
+
+npm start
